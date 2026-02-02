@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -137,6 +138,24 @@
                     <p>What the engine looked like 4 months ago</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Mascot -->
+    <section id="mascot">
+        <div class="section-label fade-in">Meet the Mascot</div>
+        <h2 class="section-title fade-in fade-in-delay-1">Say hello to PB&J</h2>
+        <p class="section-desc fade-in fade-in-delay-2">The official DabozzEngine mascot. A sandwich with a dream.</p>
+
+        <div class="mascot-viewer fade-in fade-in-delay-3">
+            <model-viewer
+                src="mascot.glb"
+                alt="PB&J Mascot"
+                auto-rotate
+                camera-controls
+                shadow-intensity="1"
+                style="width: 100%; height: 500px;">
+            </model-viewer>
         </div>
     </section>
 

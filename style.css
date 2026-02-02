@@ -332,6 +332,19 @@ section {
     color: var(--text-muted);
 }
 
+/* === Mascot === */
+.mascot-viewer {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 600px;
+}
+
+.mascot-viewer model-viewer {
+    --poster-color: transparent;
+}
+
 /* === Code Block === */
 .code-section {
     background: var(--bg-card);
