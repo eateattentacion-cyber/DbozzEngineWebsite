@@ -518,6 +518,164 @@ footer p {
 .fade-in-delay-7 { transition-delay: 0.7s; }
 .fade-in-delay-8 { transition-delay: 0.8s; }
 
+/* === Cursor Glow === */
+.cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.06), rgba(124, 58, 237, 0.03) 40%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+/* === Scroll Progress Bar === */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    z-index: 200;
+    transition: width 0.1s linear;
+}
+
+/* === Hero element transitions for parallax === */
+.hero h1,
+.hero .hero-badge,
+.hero p,
+.hero .hero-buttons {
+    transition: transform 0.15s ease-out;
+    position: relative;
+    z-index: 2;
+}
+
+/* === Hero particles canvas === */
+.hero-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* === Feature card tilt + shine === */
+.feature-card {
+    transition: all 0.2s ease-out;
+    will-change: transform;
+}
+
+.card-shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* === Magnetic buttons === */
+.btn-primary,
+.btn-secondary {
+    transition: all 0.2s ease-out;
+    will-change: transform;
+}
+
+/* === Section label reveal === */
+.section-label {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-label.label-reveal::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    animation: labelLine 0.6s ease forwards;
+}
+
+@keyframes labelLine {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* === Video card hover === */
+.video-card {
+    transition: all 0.3s ease-out;
+    will-change: transform;
+}
+
+/* === Code Rain Canvas === */
+.code-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* === Scrolling Code Background === */
+.code-scroll-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+    mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.3) 80%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3) 20%, rgba(0,0,0,0.3) 80%, transparent);
+}
+
+.code-scroll-content {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre;
+    color: rgba(255, 255, 255, 0.04);
+}
+
+.code-scroll-line {
+    padding-left: 40px;
+}
+
+.code-scroll-content .kw {
+    color: rgba(198, 120, 221, 0.08);
+}
+
+.code-scroll-content .str {
+    color: rgba(152, 195, 121, 0.08);
+}
+
+.code-scroll-content .cmt {
+    color: rgba(92, 99, 112, 0.08);
+}
+
+.code-scroll-content .typ {
+    color: rgba(229, 192, 123, 0.08);
+}
+
+/* Keep feature content above code bg */
+.features-grid,
+.section-label,
+.section-title,
+.section-desc {
+    position: relative;
+    z-index: 1;
+}
+
 /* === Responsive === */
 @media (max-width: 768px) {
     .nav-links { display: none; }
